@@ -1,0 +1,28 @@
+.navbar-nav  {
+    background: #F97300;
+}
+
+.nav-link {
+    color: #FFF4F4;
+}
+
+.text-responsive {
+    font-size: calc(100% + 0.3vw + 0.3vh);
+  }
+
+
+.btn {
+    background-color: #4CAF50;
+}
+
+.btn:hover, .btn:active:focus {
+    background-color: #4CAF50; /* Green */
+    box-shadow: 0 5px 5px 0 rgba(0,0,255,0.24);  /* Blue shadow */
+    color: white;
+    border: 1px solid red;
+}
+
+.hide {
+    display: none;
+}
+

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock portfolio
+{% endblock %}
+{% block main %}
+
+    <h1>Portfolio's Status</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            <tbody>
+                {% for entry in data %}
+                {% set X = entry["total"] %} {% set Y = entry["quantity"] %}
+                <tr>
+                    <td>{{entry["symbol"]}}</td>
+                    <td>{{entry["quantity"]}}</td>
+                    <td>{{"$%.2f"|format(X/Y)}}</td>
+                    <td>{{"$%.2f"|format(entry["total"])}}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>Cash</th>
+                    <td>{{cash}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <th>TOTAL</th>
+                    <td>{{total}}</td>
+                </tr>
+
+            </tbody>
+        </thead>
+    </table>
+
+{% endblock %}

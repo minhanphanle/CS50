@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+{% block main %}
+
+    <h1>Transaction History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Time</th>
+            </tr>
+            <tbody>
+                {% for entry in data %}
+                {% set X = entry["total"] %} {% set Y = entry["shares"] %}
+                <tr>
+                    <td>{{entry["type"]}}</td>
+                    <td>{{entry["symbol"]}}</td>
+                    <td>{{entry["shares"]}}</td>
+                    <td>{{"$%.2f"|format(X/Y)}}</td>
+                    <td>{{"$%.2f"|format(entry["total"])}}</td>
+                    <td>{{entry["time"]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+
+{% endblock %}

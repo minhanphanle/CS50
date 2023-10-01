@@ -1,0 +1,114 @@
+Times:
+
+10 simulations: 0m0.044s
+100 simulations: 0m0.028s
+1000 simulations: 0m0.034s
+10000 simulations: 0m0.116s
+100000 simulations: 0m0.907s
+1000000 simulations: 0m7.516s
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?: Predictions with only 10 simulations seems to be incorrect as the top 4 have equal likelihood of winning
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?: 1000 seems to be good enough as each country has different probability; the ranking is roughly correct while the probability has a different-from-0 one digit after the decimal point.
+
+
+
+
+world-cup/ $ time python tournament.py 2018m.csv 10
+Spain: 20.0% chance of winning
+Brazil: 20.0% chance of winning
+Belgium: 20.0% chance of winning (correct)
+Argentina: 20.0% chance of winning
+Switzerland: 10.0% chance of winning
+Portugal: 10.0% chance of winning
+
+
+
+
+world-cup/ $ python tournament.py 2018m.csv 100
+Belgium: 18.0% chance of winning
+Brazil: 18.0% chance of winning
+Portugal: 17.0% chance of winning
+Spain: 16.0% chance of winning
+Switzerland: 12.0% chance of winning
+Argentina: 8.0% chance of winning
+France: 4.0% chance of winning
+Uruguay: 2.0% chance of winning
+England: 2.0% chance of winning
+Colombia: 1.0% chance of winning
+Denmark: 1.0% chance of winning
+Croatia: 1.0% chance of winning
+
+
+
+world-cup/ $ python tournament.py 2018m.csv 1000
+Brazil: 23.2% chance of winning
+Belgium: 18.4% chance of winning
+Portugal: 15.5% chance of winning
+Spain: 12.0% chance of winning
+Switzerland: 9.5% chance of winning
+Argentina: 8.3% chance of winning
+Denmark: 3.7% chance of winning
+France: 2.7% chance of winning
+England: 2.2% chance of winning
+Croatia: 1.8% chance of winning
+Colombia: 1.4% chance of winning
+Mexico: 0.6% chance of winning
+Uruguay: 0.4% chance of winning
+Sweden: 0.3% chance of winning
+
+
+world-cup/ $ time python tournament.py 2018m.csv 10000
+Belgium: 22.1% chance of winning
+Brazil: 19.9% chance of winning
+Portugal: 13.7% chance of winning
+Spain: 12.6% chance of winning
+Switzerland: 9.8% chance of winning
+Argentina: 7.5% chance of winning
+France: 3.5% chance of winning
+Denmark: 3.5% chance of winning
+England: 2.7% chance of winning
+Colombia: 1.7% chance of winning
+Croatia: 1.5% chance of winning
+Sweden: 0.6% chance of winning
+Mexico: 0.5% chance of winning
+Uruguay: 0.5% chance of winning
+
+world-cup/ $ time python tournament.py 2018m.csv 100000
+Belgium: 21.1% chance of winning
+Brazil: 20.8% chance of winning
+Portugal: 14.2% chance of winning
+Spain: 11.9% chance of winning
+Switzerland: 10.6% chance of winning
+Argentina: 7.9% chance of winning
+France: 3.4% chance of winning
+Denmark: 3.2% chance of winning
+England: 2.7% chance of winning
+Colombia: 1.6% chance of winning
+Croatia: 1.4% chance of winning
+Mexico: 0.5% chance of winning
+Sweden: 0.5% chance of winning
+Uruguay: 0.5% chance of winning
+Russia: 0.0% chance of winning
+
+
+world-cup/ $ time python tournament.py 2018m.csv 1000000
+Belgium: 21.2% chance of winning
+Brazil: 20.7% chance of winning
+Portugal: 14.2% chance of winning
+Spain: 11.9% chance of winning
+Switzerland: 10.4% chance of winning
+Argentina: 7.8% chance of winning
+France: 3.3% chance of winning
+Denmark: 3.1% chance of winning
+England: 2.8% chance of winning
+Colombia: 1.6% chance of winning
+Croatia: 1.4% chance of winning
+Mexico: 0.5% chance of winning
+Uruguay: 0.5% chance of winning
+Sweden: 0.5% chance of winning
+Russia: 0.0% chance of winning
+Japan: 0.0% chance of winning

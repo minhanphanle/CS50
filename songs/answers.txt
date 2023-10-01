@@ -1,0 +1,11 @@
+
+| AVG(energy) | AVG(valence) | AVG(danceability) |
++-------------+--------------+-------------------+
+| 0.65906     | 0.484443     | 0.71646           |
+
+
+Audio aura: The music is generally upbeat, energetic, and very danceable.
+It could be a bit melancholic as valence or positiveness of the album is below average
+
+It would be better if Spotify include number of streams for each song, which would be a weight factor when calculating avg energy, valence, and
+danceability. Furthermore, loudness, speechiness, temp, duration, etc. should be factored in.

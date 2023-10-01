@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: as sort 2 is merge sort, and shorter time elapsed for sorted 10k lines (n omega)
+
+sort2 uses: merge sort
+
+How do you know?: lowest time elapsed for sorting random 10k line (nlogn O)
+
+sort3 uses: selection sort
+
+How do you know?: as sort 2 is merge sort, and longer time elapsed compared to sort 1 for sorted 10k lines (still n^2 omega)

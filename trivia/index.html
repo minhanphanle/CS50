@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let buttons = document.querySelectorAll("button")
+                let input = document.querySelector('input');
+                console.log(buttons)
+                let length = buttons.length
+                for (let i = 0; i < length; i++) {
+                    buttons[i].addEventListener("click", function () {
+                        let buttonI = buttons[i].parentElement.querySelector("p")
+                        if (i < length - 1) {
+                            console.log(buttons[i])
+                            console.log(buttonI)
+                            buttonI.style.visibility  = "visible"
+                        } else {
+                            if (input.value.toLowerCase() === "red") {
+                                buttons[i].parentElement.querySelector("p.green").style.visibility  = "visible"
+                            } else {
+                                buttons[i].parentElement.querySelector("p.red").style.visibility  = "visible"
+                            }
+                        }
+                    })
+                }
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>How do you become an entrepreneur?</h3>
+                <div>
+                    <div align="center" class="float-left">
+                        <button id="1">
+                            Read a book about it
+                        </button >
+                        <p class="red">
+                            Wrong answer!
+                        </p>
+                    </div>
+                    <div align="center" class="float-left">
+                        <button id="2">
+                            Attend a bunch of seminars
+                        </button>
+                        <p class="red">
+                            Wrong answer!
+                        </p>
+                    </div>
+                    <div align="center"  class="float-left">
+                        <button id="3">
+                            Do it
+                        </button>
+                        <p class="green">
+                            Correct!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is my favorite color?</h3>
+                <input autocomplete="off" autofocus placeholder="Type your answer" type="text">
+                <button>Check</button>
+                <p class="red">Wrong answer!</p>
+                <p class="green">Correct!</p>
+            </div>
+        </div>
+    </body>
+</html>
